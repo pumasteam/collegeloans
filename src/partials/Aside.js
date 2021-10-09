@@ -3,39 +3,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSchool } from '@fortawesome/free-solid-svg-icons'
 import { faDonate } from "@fortawesome/free-solid-svg-icons";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Aside(props) {
   const { logout } = useAuth0();
+  const disable = "hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ";
   return (
-    <div class="flex flex-row h-full">
-      <nav class="bg-white dark:bg-gray-800 w-20 h-screen justify-between flex flex-col">
-        <div class="mt-10 mb-10">
+    <div className="flex flex-row h-full">
+      <nav className="bg-white dark:bg-gray-800 w-20 h-screen justify-between flex flex-col">
+        <div className="mt-10 mb-10">
           <span>
             <img
               src={props.avatar}
-              class="rounded-full w-10 h-10 mb-3 mx-auto"
+              className="rounded-full w-10 h-10 mb-3 mx-auto"
               alt=""
             />
           </span>
-          <div class="mt-10">
+          <div className="mt-10">
             <ul>
-              <li class="my-12 text-center">
-                <span className="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-800 dark:text-gray-100 rounded-lg bg-gray-100 dark:bg-gray-600 cursor-pointer">
-                  <span class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+              <li className="my-12 text-center">
+                <Link to="/app" className={disable}>
+                  <span className="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                     <FontAwesomeIcon icon={faSchool} />
                   </span>
-                </span>
+                </Link>
               </li>
-              <li class="my-12 text-center">
-                <span className="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ">
-                  <span class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+              <li className="my-12 text-center">
+                <span className={disable}>
+                  <span className="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                     <FontAwesomeIcon icon={faDonate} />
                   </span>
                 </span>
               </li>
-              <li class="my-12 text-center">
+              <li className="my-12 text-center">
                 <span className="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ">
-                  <span class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                  <span className="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                     <FontAwesomeIcon icon={faGraduationCap} />
                   </span>
                 </span>
@@ -43,11 +45,11 @@ export default function Aside(props) {
             </ul>
           </div>
         </div>
-        <div class="mb-4">
+        <div className="mb-4">
           <span onClick={() => logout({ returnTo: window.location.origin })}>
             <span>
               <svg
-                class="fill-current h-5 w-5 text-gray-300 mx-auto hover:text-red-500"
+                className="fill-current h-5 w-5 text-gray-300 mx-auto hover:text-red-500"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
