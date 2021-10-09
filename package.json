@@ -1,6 +1,6 @@
 {
-  "name": "simple-light-react",
-  "version": "0.1.0",
+  "name": "collegeloans",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.8.0",
