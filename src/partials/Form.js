@@ -22,23 +22,36 @@ export default function FormUI(props) {
           <Form className="flex flex-col items-center justify-between">
             <div className="flex flex-col items-center justify-between">
               <Field
+                type="number"
+                min="100"
+                max="400"
                 className="m-1 max-w-sm rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 name="wsat"
+                required
                 placeholder="Your writing SAT score"
               />
               <Field
+                type="number"
+                min="100"
+                max="400"
                 className="m-1 max-w-sm rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 name="rsat"
+                required
                 placeholder="Your reading SAT score"
               />
               <Field
+                type="number"
+                min="200"
+                max="800"
                 className="m-1 max-w-sm rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 name="msat"
+                required
                 placeholder="Your math SAT score"
               />
               <Field
                 component="select"
                 name="state"
+                required
                 placeholder="Your state"
                 className="block text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 m-1 w-96"
               >
@@ -51,12 +64,14 @@ export default function FormUI(props) {
                 className="m-1 max-w-sm rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 name="anualIncome"
                 type="number"
+                required
+                min="1"
                 placeholder="Your anual income"
               />
             </div>
             <button
               type="submit"
-              className="max-w-xs m-6 py-2 px-4  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  opacity-70 cursor-not-allowed rounded-lg"
+              className="max-w-xs m-6 py-2 px-4  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  opacity-70 cursor-pointer rounded-lg"
             >
               Submit
             </button>
