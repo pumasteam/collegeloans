@@ -133,7 +133,7 @@ export default function PayPage() {
                         </div>
                       </div>
                       <span className="m-6 mb-6 text-2xl text-black dark:text-white font-bold">
-                        Next pays
+                        Next payments
                       </span>
                       <LineChart
                         width={1000}
