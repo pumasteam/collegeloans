@@ -20,7 +20,7 @@ export default function FormUI(props) {
         }}
       >
         {(props) => (
-          <Form className="flex flex-col items-center justify-between">
+          <Form action="/colleges" className="flex flex-col items-center justify-between">
             <div className="flex flex-col items-center justify-between">
               <Field
                 type="number"
@@ -70,12 +70,12 @@ export default function FormUI(props) {
                 placeholder="Your anual income"
               />
             </div>
-            <Link
-              to="/colleges"
+            <button
+              type="submit"
               className="max-w-xs m-6 py-2 px-4  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  opacity-70 cursor-pointer rounded-lg"
             >
-              Submit
-            </Link>
+              <Link className="w-full" to={"/colleges/" + (props.values.msat + props.values.wsat + props.values.rsat)}>submit</Link>
+            </button>
             <PersistFormikValues name="college" />
           </Form>
         )}

@@ -43,7 +43,7 @@ function App() {
         <Route path="/app">
           <Dash />
         </Route>
-        <Route path="/colleges">
+        <Route path="/colleges/:a">
           <College />
         </Route>
       </Switch>
