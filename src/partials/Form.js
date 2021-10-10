@@ -67,14 +67,14 @@ export default function FormUI(props) {
                 type="number"
                 required
                 min="1"
-                placeholder="Your anual income"
+                placeholder="Your annual income"
               />
             </div>
             <button
               type="submit"
               className="max-w-xs m-6 py-2 px-4  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  opacity-70 cursor-pointer rounded-lg"
             >
-              <Link className="w-full" to={"/colleges/" + (props.values.msat + props.values.wsat + props.values.rsat)}>submit</Link>
+              <Link className="min-w-xs" to={`/colleges/${props.values.msat + props.values.wsat + props.values.rsat}?sat_reading=${props.values.rsat}&sat_writing=${props.values.wsat}&sat_math=${props.values.msat}&region=${props.values.state}&annual_income=${props.values.anualIncome}`}>submit</Link>
             </button>
             <PersistFormikValues name="college" />
           </Form>

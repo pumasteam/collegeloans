@@ -1,13 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSchool } from '@fortawesome/free-solid-svg-icons'
-import { faDonate } from "@fortawesome/free-solid-svg-icons";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
 export default function Aside(props) {
   const { logout } = useAuth0();
-  const disable = "hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ";
   return (
     <div className="flex flex-row h-full">
       <nav className="bg-white dark:bg-gray-800 w-20 h-screen justify-between flex flex-col">
@@ -19,31 +13,6 @@ export default function Aside(props) {
               alt=""
             />
           </span>
-          <div className="mt-10">
-            <ul>
-              <li className="my-12 text-center">
-                <Link to="/app" className={disable}>
-                  <span className="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
-                    <FontAwesomeIcon icon={faSchool} />
-                  </span>
-                </Link>
-              </li>
-              <li className="my-12 text-center">
-                <span className={disable}>
-                  <span className="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
-                    <FontAwesomeIcon icon={faDonate} />
-                  </span>
-                </span>
-              </li>
-              <li className="my-12 text-center">
-                <span className="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ">
-                  <span className="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </div>
         </div>
         <div className="mb-4">
           <span onClick={() => logout({ returnTo: window.location.origin })}>

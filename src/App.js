@@ -13,6 +13,7 @@ import { focusHandling } from 'cruip-js-toolkit';
 import Home from './pages/Home';
 import Dash from "./pages/App";
 import College from './pages/Colleges';
+import Finance from './pages/Finance';
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
         </Route>
         <Route path="/colleges/:sat">
           <College />
+        </Route>
+        <Route path="/finance/:collegeId">
+          <Finance />
         </Route>
       </Switch>
     </>

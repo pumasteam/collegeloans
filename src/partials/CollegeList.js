@@ -32,7 +32,7 @@ export default function CollegeList() {
           {colleges.map((college) => (
             <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
               <Link
-                to={"/finance/" + college.collegeId}
+                to={"/finance/" + college.collegeId + window.location.search}
                 className="w-full block h-full"
               >
                 <img
