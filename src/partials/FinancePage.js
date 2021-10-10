@@ -23,18 +23,18 @@ export default function CollegeList() {
               <h1 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
                 {college.name}
               </h1>
-              <div class="w-2/5">
-                <p class="text-lg font-medium leading-6 text-gray-900">
+              <div className="w-2/5">
+                <p className="text-lg font-medium leading-6 text-gray-900">
                   4-year college
                 </p>
-                <p class="text-lg font-medium leading-6 text-gray-900">
+                <p className="text-lg font-medium leading-6 text-gray-900">
                   Median salary: ${college.medianEarningsSixYrsAfterEntry}
                 </p>
-                <p class="text-lg font-medium leading-6 text-gray-900">
+                <p className="text-lg font-medium leading-6 text-gray-900">
                   Median price: ${college.netPriceByIncomeLevel110001Plus}
                 </p>
-                <p class="mt-2">
-                  <p class="text-base leading-6 text-gray-500">
+                <p className="mt-2">
+                  <p className="text-base leading-6 text-gray-500">
                     {college.shortDescription}
                   </p>
                 </p>
